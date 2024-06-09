@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "qa-automation-portfolio-go"
+version = "0.1.0"
+description = ""
+authors = ["Viktor Kurti <aplikat@ya.ru>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[tool.poetry.group.dev.dependencies]
+commitizen = "^3.27.0"
+
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+tag_format = "$version"
+version_scheme = "semver2"
+version_provider = "poetry"
+update_changelog_on_bump = true
+major_version_zero = true
+bump_message = "bump: version $current_version → $new_version"
+annotated_tag = true
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
