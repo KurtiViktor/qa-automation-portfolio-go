@@ -11,6 +11,7 @@ python = "^3.11"
 
 [tool.poetry.group.dev.dependencies]
 commitizen = "^3.27.0"
+pre-commit = "^3.7.1"
 
 
 [tool.commitizen]

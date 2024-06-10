@@ -1,0 +1,35 @@
+exclude: ^(.vscode/)
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+      - id: check-docstring-first
+      - id: check-merge-conflict
+      - id: debug-statements
+      - id: end-of-file-fixer
+      - id: mixed-line-ending
+      - id: trailing-whitespace
+      - id: check-ast
+      - id: check-added-large-files
+      - id: check-json
+      - id: check-toml
+      - id: check-yaml
+      - id: check-shebang-scripts-are-executable
+  - repo: https://github.com/commitizen-tools/commitizen
+    rev: v3.24.0
+    hooks:
+      - id: commitizen
+        stages: [commit-msg]
+      - id: commitizen-branch
+        stages: [push]
+  - repo: https://github.com/python-poetry/poetry
+    rev: 1.8.0
+    hooks:
+      - id: poetry-check
+      - id: poetry-lock
+  - repo: https://github.com/dnephin/pre-commit-golang
+    rev: v0.5.1
+    hooks:
+      - id: no-go-testing
+      - id: go-unit-tests
